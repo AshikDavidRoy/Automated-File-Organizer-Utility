@@ -120,7 +120,3 @@ While the GUI was responsive for small directories, it would freeze during the s
 ### 4. **Error Handling**:
 
 Moving files from one location to another sometimes caused errors due to permission issues or files being in use. We improved error handling by adding try-except blocks around the file-moving logic, ensuring that the program doesn't crash and logs the error for debugging.
-
-## Conclusion
-
-The **Automated File Organizer Utility** successfully addresses the problem of manual file sorting by automating the categorization and organization of files based on their extensions and creation dates. With an intuitive GUI, conflict resolution, and robust error handling, this tool is a practical solution for anyone looking to manage and organize their files efficiently.
