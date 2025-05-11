@@ -102,21 +102,3 @@ Example output on the console:
 [INFO] Total files to process: 50
 [INFO] Moved 45 files in 10.24 seconds.
 ```
-
-## Challenges Faced and How We Fixed Them
-
-### 1. **Handling File Name Conflicts**:
-
-Initially, the utility would overwrite files with the same name in the destination folder. This was problematic, especially when organizing large datasets with duplicate filenames. We solved this by introducing a counter to append to the filename, ensuring that files are uniquely named and preventing data loss.
-
-### 2. **File Category Mapping**:
-
-The categorization logic had to be flexible to handle a wide variety of file types. We initially missed some file types, but this was fixed by expanding the extension mappings in the `EXTENSION_MAP` dictionary.
-
-### 3. **GUI Responsiveness**:
-
-While the GUI was responsive for small directories, it would freeze during the sorting process for larger folders due to the heavy computation. To fix this, we moved the sorting operation to a separate thread, allowing the GUI to stay responsive during the file organization.
-
-### 4. **Error Handling**:
-
-Moving files from one location to another sometimes caused errors due to permission issues or files being in use. We improved error handling by adding try-except blocks around the file-moving logic, ensuring that the program doesn't crash and logs the error for debugging.
